@@ -1,0 +1,19 @@
+package com.javalec.ex;
+
+public class Calculation {
+
+	private int firstNum;
+	private int secondNum;
+	
+	public void addtion() {
+		System.out.println("addtion()");
+		int result = firstNum + secondNum;
+		System.out.println(result);
+	}
+	
+	public void subtraction() {
+		System.out.println("addtion()");
+		int result = firstNum - secondNum;
+		System.out.println(result);
+	}
+}

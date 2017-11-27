@@ -1,0 +1,12 @@
+package com.javalec.ex;
+
+public class Calculation {
+
+	private int firstNum;
+	private int secondNum;
+	
+	public void addtion() {
+		int result = firstNum + secondNum ;
+		
+	}
+}
