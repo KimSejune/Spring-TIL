@@ -21,12 +21,12 @@ public class RedirectController {
 		return "redirect:studentNo";
 	}
 	
-	@RequestMapping("/studentOk")
+	@RequestMapping("/student/studentOk")
 	public String studentOk() {
 		return "student/studentOk";
 	}
 	
-	@RequestMapping("/studentNo")
+	@RequestMapping("/student/studentNo")
 	public String studentNo() {
 		return "student/studentNo";
 	}
