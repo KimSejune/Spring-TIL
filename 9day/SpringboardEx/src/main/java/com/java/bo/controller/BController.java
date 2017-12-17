@@ -1,7 +1,11 @@
 package com.java.bo.controller;
 
+import java.util.Locale;
+
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,12 +23,13 @@ import com.java.bo.command.BWriteCommand;
 public class BController {
 
 	// 초기화가 아닌 생성만 해주고 각자의 초기화는 해당 method안에서 한다.
+	@Inject
 	BCommand command;
 	
 	// list를 보여준다.
 	@RequestMapping(value= "/list", method = RequestMethod.GET )
-	public String list(Model model) {
-		
+	public String list(Locale locale, Model model) throws Exception {
+	
 		System.out.println("list method start!!!!!!");
 		// BListCommand에게 작업을 시켜야한다.
 		command = new BListCommand();
@@ -43,7 +48,7 @@ public class BController {
 	
 	// 실제작성 (동작)
 	@RequestMapping(value="/write", method = RequestMethod.GET)
-	public String write(HttpServletRequest httpServletRequset, Model model) {
+	public String write(HttpServletRequest httpServletRequset, Model model) throws Exception {
 		System.out.println("write (동작) method start!!!!!!");
 		
 		model.addAttribute("req", httpServletRequset);
@@ -56,7 +61,7 @@ public class BController {
 	
 	// content를 본다.
 	@RequestMapping(value="/content_view", method = RequestMethod.GET)
-	public String contentView(HttpServletRequest httpServletRequest, Model model) {
+	public String contentView(HttpServletRequest httpServletRequest, Model model) throws Exception {
 		System.out.println("content view method start!!!!!!");
 		
 		model.addAttribute("req", httpServletRequest);
@@ -67,7 +72,7 @@ public class BController {
 	
 	// 수정
 	@RequestMapping(value="/modify", method = RequestMethod.POST )
-	public String modify(HttpServletRequest httpServletRequest, Model model) {
+	public String modify(HttpServletRequest httpServletRequest, Model model) throws Exception {
 		System.out.println("modify view method start!!!!!!");
 		model.addAttribute("req", httpServletRequest);
 		command = new BModifyCommand();
@@ -79,7 +84,7 @@ public class BController {
 	
 	// 답변보는것
 	@RequestMapping(value="/reply_view", method = RequestMethod.GET )
-	public String replyView(HttpServletRequest httpServletRequest, Model model) {
+	public String replyView(HttpServletRequest httpServletRequest, Model model) throws Exception {
 		System.out.println("reply view method start!!!!!!");
 		
 		model.addAttribute("req", httpServletRequest);
@@ -90,7 +95,7 @@ public class BController {
 	
 	// 답변작성기능 
 	@RequestMapping(value="/replay", method = RequestMethod.GET )
-	public String reply(HttpServletRequest httpServletRequest, Model model) {
+	public String reply(HttpServletRequest httpServletRequest, Model model) throws Exception {
 		System.out.println("reply method start!!!!!!");
 		
 		model.addAttribute("req", httpServletRequest);
@@ -101,7 +106,7 @@ public class BController {
 	
 	// 삭제
 	@RequestMapping(value="/delete", method = RequestMethod.GET )
-	public String delete(HttpServletRequest httpServletRequest, Model model) {
+	public String delete(HttpServletRequest httpServletRequest, Model model) throws Exception {
 		System.out.println("delete method start!!!!!!");
 		model.addAttribute("req", httpServletRequest);
 		command = new BDeleteCommand();
