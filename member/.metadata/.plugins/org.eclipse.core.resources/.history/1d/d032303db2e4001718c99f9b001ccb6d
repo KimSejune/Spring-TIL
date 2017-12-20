@@ -1,0 +1,10 @@
+package com.java.dao;
+
+import java.util.List;
+
+import com.java.dto.MemberVO;
+
+public interface MemberDAO {
+	public List<MemberVO> selectMember() throws Exception;
+	public int addMember(String pw, String name) throws Exception;
+}

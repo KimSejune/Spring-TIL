@@ -1,0 +1,13 @@
+package com.java.service;
+
+import org.springframework.stereotype.Service;
+@Service
+public class ServiceImpl implements Service {
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
