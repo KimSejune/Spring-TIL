@@ -27,6 +27,12 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 
+	@Override
+	public void deleteMember(MemberVO memberVO) throws Exception {
+		memberDAO.deleteMember(memberVO);
+		
+	}
+
 
 
 

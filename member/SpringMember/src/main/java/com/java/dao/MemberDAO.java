@@ -7,4 +7,5 @@ import com.java.dto.MemberVO;
 public interface MemberDAO {
 	public List<MemberVO> selectMember() throws Exception;
 	public void addMember(MemberVO memberVO) throws Exception;
+	public void deleteMember(MemberVO memberVO) throws Exception;
 }

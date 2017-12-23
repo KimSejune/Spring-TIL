@@ -21,6 +21,11 @@
 			<td>${members.id}</td>
 			<td>${members.pw}</td>
 			<td>${members.name}</td>
+			<td>
+				<form action="delete/${members.id}" method="POST">
+					<input type="submit" value="delete">
+				</form>
+			</td>
 		</tr>
 		</c:forEach>
 
