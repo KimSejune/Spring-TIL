@@ -23,6 +23,13 @@ public class MemberDAOImp implements MemberDAO {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList(Namespace+".selectMember");
 	}
+	
+	
+	@Override
+	public String selectOneMember(int id) throws Exception {
+		return sqlSession.selectOne(Namespace+".selectOneMember", id);
+	}
+
 
 	@Override
 	public void addMember(MemberVO memberVO) throws Exception {
@@ -33,6 +40,12 @@ public class MemberDAOImp implements MemberDAO {
 	@Override
 	public void deleteMember(MemberVO memberVO) throws Exception {
 		sqlSession.delete(Namespace+".deleteMember", memberVO);
+		
+	}
+
+	@Override
+	public void updateMember(MemberVO memberVO) throws Exception {
+		sqlSession.update(Namespace+".updateMember", memberVO);
 		
 	}
 

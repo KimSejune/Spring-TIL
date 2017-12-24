@@ -33,7 +33,15 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 
+	@Override
+	public void updateMember(MemberVO memberVO) throws Exception {
+		memberDAO.updateMember(memberVO);
+		
+	}
 
-
+	@Override
+	public String selectOneMember(int id) throws Exception {
+		return memberDAO.selectOneMember(id);
+	}
 
 }
