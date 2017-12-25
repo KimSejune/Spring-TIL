@@ -18,7 +18,7 @@
 		</tr>
 		<c:forEach items="${memberList}" var="members">
 		<tr>
-			<td>${members.id}</td>
+			<td><a href="select/${members.id}"> ${members.id} </a></td>
 			<td>${members.pw}</td>
 			<td>${members.name}</td>
 			<td>

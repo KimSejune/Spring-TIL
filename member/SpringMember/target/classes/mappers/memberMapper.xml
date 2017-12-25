@@ -15,8 +15,8 @@
  		SELECT ID, PW, NAME FROM MEMBER
  	</select>   
  	
- 	<select id="selectOneMember" resultMap="MemberVOResult">
- 		SELECT ID, PW, NAME FROM MEMBER WHERE id=${id}
+ 	<select id="selectOneMember" resultMap="MemberVOResult" >
+ 		SELECT ID, PW, NAME FROM MEMBER WHERE id = #{id}
  	</select>
  	
 	<insert id="addMember" parameterType="memberVO" useGeneratedKeys="true" keyProperty="id">
@@ -24,7 +24,7 @@
  	</insert>
  	
  	<delete id="deleteMember" parameterType="memberVO" flushCache="true">
- 		DELETE FROM member WHERE id = ${id}
+ 		DELETE FROM member WHERE id = #{id}
  	</delete>
  	
  	<update id="updateMember" parameterType="memberVO" flushCache="true">
