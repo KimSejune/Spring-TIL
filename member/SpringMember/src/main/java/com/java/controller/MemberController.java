@@ -36,7 +36,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/select/{id}", method = RequestMethod.GET )
 	public String selectOne(@PathVariable int id, Model model) throws Exception {
-		List<MemberVO> member = memberService.selectOneMember(id);
+		MemberVO member = memberService.selectOneMember(id);
 		model.addAttribute("member", member);
 		return "select";
 	}

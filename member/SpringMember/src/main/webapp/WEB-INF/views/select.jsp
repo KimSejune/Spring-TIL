@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	asd
+	${member.id}
+	${member.name}
+	${member.pw}
 </body>
 </html>

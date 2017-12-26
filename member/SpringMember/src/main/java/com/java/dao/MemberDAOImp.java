@@ -26,7 +26,7 @@ public class MemberDAOImp implements MemberDAO {
 	
 	
 	@Override
-	public List<MemberVO> selectOneMember(int id) throws Exception {
+	public MemberVO selectOneMember(int id) throws Exception {
 		return sqlSession.selectOne(Namespace+".selectOneMember", id);
 	}
 

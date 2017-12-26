@@ -15,7 +15,8 @@
  		SELECT ID, PW, NAME FROM MEMBER
  	</select>   
  	
- 	<select id="selectOneMember" resultMap="MemberVOResult" >
+ 	<!-- id 값이 int형이라는 것을 명시해줘야한다. -->
+ 	<select id="selectOneMember" parameterType="int" resultMap="MemberVOResult" >
  		SELECT ID, PW, NAME FROM MEMBER WHERE id = #{id}
  	</select>
  	

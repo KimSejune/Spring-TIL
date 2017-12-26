@@ -22,7 +22,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public List<MemberVO> selectOneMember(int id) throws Exception {
+	public MemberVO selectOneMember(int id) throws Exception {
 		return memberDAO.selectOneMember(id);
 	}
 	@Override
