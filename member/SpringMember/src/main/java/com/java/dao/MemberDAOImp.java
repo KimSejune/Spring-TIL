@@ -24,7 +24,7 @@ public class MemberDAOImp implements MemberDAO {
 		return sqlSession.selectList(Namespace+".selectMember");
 	}
 	
-	
+	// 들어가는 parameter를 명시해줘야한다.
 	@Override
 	public MemberVO selectOneMember(int id) throws Exception {
 		return sqlSession.selectOne(Namespace+".selectOneMember", id);

@@ -1,7 +1,0 @@
-package com.java.dto;
-
-public class MemberVO {
-	private int id;
-	private String pw;
-	private 
-}

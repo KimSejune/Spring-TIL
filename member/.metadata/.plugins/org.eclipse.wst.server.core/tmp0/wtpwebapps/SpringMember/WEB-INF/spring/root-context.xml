@@ -36,11 +36,6 @@
         destroy-method="clearCache">
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
     </bean>
-	
-<!-- 	<bean id="memberDAO" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="com.java.dao.MemberDAO"></property>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-	</bean> -->
 	    
     <!-- bean 등록 -->
     <context:component-scan base-package="com.java.dao"></context:component-scan>

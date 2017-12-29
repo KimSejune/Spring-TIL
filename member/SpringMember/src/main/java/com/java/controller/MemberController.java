@@ -55,9 +55,9 @@ public class MemberController {
 		return "redirect:../list";
 	}
 	
-	@RequestMapping(value="/update/{id}", method = RequestMethod.PUT )
+	@RequestMapping(value="/update/{id}", method = RequestMethod.POST )
 	public String update(MemberVO memberVO) throws Exception {
 		memberService.updateMember(memberVO);
-		return "update";
+		return "redirect:../list";
 	}
 }
