@@ -10,7 +10,7 @@
 <body>
 	<h1>Hello Member Table</h1>
 
-	<table width="500" board="1" height="200">
+	<table border="1" width="500" height="200">
 		<tr>
 			<th>아이디</th>
 			<th>비번</th>

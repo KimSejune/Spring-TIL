@@ -38,8 +38,8 @@ public class MemberDAOImp implements MemberDAO {
 	}
 
 	@Override
-	public void deleteMember(MemberVO memberVO) throws Exception {
-		sqlSession.delete(Namespace+".deleteMember", memberVO);
+	public void deleteMember(int id) throws Exception {
+		sqlSession.delete(Namespace+".deleteMember", id);
 		
 	}
 
