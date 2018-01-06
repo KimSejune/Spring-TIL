@@ -11,11 +11,11 @@
 	${member.id}
 	${member.name}
 	${member.pw}
-	
-	<form action="/mb/update/${member.id}" method="POST">
+	<form action="../update/${member.id}">
 		change pw : <input type="text" name="pw">
 		change name : <input type="text" name="name">
 		<input type="submit" value="submit">
 	</form>
+	
 </body>
 </html>
